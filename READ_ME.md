@@ -33,3 +33,9 @@ ENTRYPOINT ["java","-jar", "/app.jar"]
 
 * Run the application:
     #### docker run -p 9900:8080 mydockerapp
+
+* Remove Container:  docker container prune
+* List Container  :  docker container ls
+* List Image      :  docker image ls
+* Remove Container:  docker container rm containerId
+* Remove Image    :  docker image rm imageId
