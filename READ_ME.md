@@ -40,4 +40,22 @@ ENTRYPOINT ["java","-jar", "/app.jar"]
 * Remove Container:  docker container rm containerId
 * Remove Image    :  docker image rm imageId
 
-## Docker Hub: https://hub.docker.com/repositories
+### Docker Hub: https://hub.docker.com/repositories
+
+## Pulling and running MYSQL=8.0.29
+
+docker run -it --name docker-mysql --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_USER=sys -e MYSQL_DATABASE=test -e MYSQL_PASSWORD=1234 -d mysql:8.0.29
+
+###Note: MYSQL_USER **!** = root
+
+### create spring boot - mysql network:
+docker network create springboot-mysql-net
+
+
+## Run Spring boot application with MY-SQL image:
+
+docker run --network=springboot-mysql-net --name springboot-container -p 9900:8080 -d mydockerapp
+
+
+### Ref and help: 
+https://dev.to/devanandukalkar/guide-to-dockerize-your-spring-boot-application-with-mysql-b9g
