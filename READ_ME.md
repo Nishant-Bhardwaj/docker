@@ -12,7 +12,7 @@ ENTRYPOINT ["java","-jar", "/app.jar"]
 * Open to project(name: docker) location:
     #### cd /mnt/c/POC-SpringBoot/Docker_POC/docker/
 * Build (Name of build on docker -> mydockerapp):
-    ####  docker build -f Dockerfile -t mydockerapp .
+    ####  docker build -f Dockerfile -t mydockerapp .   ## NOTE: "." dot in end is mandatory
   * Docker Result *****
   
     Sending build context to Docker daemon  20.44MB
